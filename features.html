@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="no-referrer">
+    <title>Features - Fast Connect</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="favicon.png" alt="">Fast Connect</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html" class="active">Features</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <a href="login.html" class="cta-button" id="navAuthButton">Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container" style="padding-top: 120px;">
+            <h1>Everything in one app</h1>
+            <p>Encrypted chat, a friends network and an AI assistant. All of it is in Fast Connect 1.1.</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Multi-Layered Encryption</h3>
+                    <p>Every connection to a chat server is encrypted with AES-256. On top of that, broadcasts
+                        and private messages pass through several layers of the Vigenère cipher.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                    <h3>FastAI Desktop Assistant</h3>
+                    <p>A chat assistant powered by Google Gemini, with model switching. It can describe images
+                        (.jpg, .png, .webp), analyze video, generate images and produce audio.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Accounts</h3>
+                    <p>Register and log in securely. Passwords are stored only as salted, slow hashes, and chat
+                        servers verify who you are without ever seeing your password. Your profile and friends
+                        are saved to the cloud.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-plus"></i></div>
+                    <h3>Friends &amp; Requests</h3>
+                    <p>Search for connected users, send friend requests and accept the pending ones, all from the
+                        Users tab.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Private DMs &amp; Broadcasts</h3>
+                    <p>Double-click a friend to open an encrypted one-on-one chat, or broadcast to everyone on
+                        the server.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Stable Networking</h3>
+                    <p>The TCP server and client send length-prefixed binary frames, and a multi-threaded server
+                        delivers the messages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>How it works</h2>
+            <div class="how-grid">
+                <div class="how-step">
+                    <span class="how-num">1</span>
+                    <h3>Sign in</h3>
+                    <p>Create a free account in the login window. It is saved to the cloud.</p>
+                </div>
+                <div class="how-step">
+                    <span class="how-num">2</span>
+                    <h3>Host or join</h3>
+                    <p>On the Setup tab, start your own server or enter a friend's IP and port.</p>
+                </div>
+                <div class="how-step">
+                    <span class="how-num">3</span>
+                    <h3>Add friends &amp; chat</h3>
+                    <p>Find people on the Users tab, then DM them, broadcast, or ask FastAI.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Download Fast Connect</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fast Connect. Released under the MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="nav.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

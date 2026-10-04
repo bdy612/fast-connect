@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="no-referrer">
+    <meta name="robots" content="noindex">
+    <title>Admin - Fast Connect</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        .admin-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 1rem 2rem;
+        }
+
+        .admin-card {
+            background: var(--surface-color);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .admin-input {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            margin: 0.5rem 0 1rem;
+            background: var(--bg-color);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font: inherit;
+        }
+
+        .admin-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .admin-button {
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .admin-button:hover {
+            background: var(--primary-hover);
+        }
+
+        .admin-button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        .admin-button.danger {
+            background: rgba(239, 68, 68, 0.12);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 0.4rem 0.9rem;
+        }
+
+        .admin-button.danger:hover {
+            background: #ef4444;
+            color: white;
+        }
+
+        .admin-button.ghost {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .admin-message {
+            display: none;
+            padding: 0.9rem 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .admin-message.error {
+            display: block;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+        }
+
+        .admin-message.success {
+            display: block;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #10b981;
+        }
+
+        .admin-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .admin-toolbar h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .admin-toolbar .admin-input {
+            margin: 0;
+            max-width: 260px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            white-space: nowrap;
+        }
+
+        th {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        td:last-child, th:last-child {
+            text-align: right;
+        }
+
+        .empty-row {
+            text-align: center !important;
+            color: var(--text-secondary);
+            padding: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="favicon.png" alt="">Fast Connect Admin</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <button class="admin-button ghost" id="lockButton" hidden>
+                    <i class="fas fa-lock"></i> Lock
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <!-- Password gate -->
+        <section class="admin-card" id="gate" style="max-width: 440px; margin: 0 auto;">
+            <h1 style="font-size: 2rem;"><i class="fas fa-shield-halved"></i> Admin</h1>
+            <p>Enter the admin password to manage Fast Connect accounts.</p>
+            <div id="gateMessage" class="admin-message"></div>
+            <form id="gateForm">
+                <input type="password" id="adminPassword" class="admin-input" placeholder="Admin password"
+                    autocomplete="current-password" required>
+                <button type="submit" class="admin-button" id="unlockButton" style="width: 100%;">
+                    <i class="fas fa-unlock"></i> Unlock
+                </button>
+            </form>
+        </section>
+
+        <!-- Accounts -->
+        <section class="admin-card" id="panel" hidden>
+            <div class="admin-toolbar">
+                <h2><i class="fas fa-users"></i> Accounts <span id="accountCount" style="color: var(--text-secondary);"></span></h2>
+                <input type="search" id="search" class="admin-input" placeholder="Search accounts...">
+                <button class="admin-button ghost" id="refreshButton"><i class="fas fa-rotate"></i> Refresh</button>
+            </div>
+            <div id="panelMessage" class="admin-message"></div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Username</th>
+                            <th>Real name</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="accountsBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fast Connect. Admin Panel.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

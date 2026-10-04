@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="no-referrer">
+    <title>Download - Fast Connect</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="favicon.png" alt="">Fast Connect</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="download.html" class="active">Download</a>
+                </div>
+                <a href="login.html" class="cta-button" id="navAuthButton">Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container" style="padding-top: 120px;">
+            <div class="download-card">
+                <span class="version-tag">Version 1.1 &middot; October 2026</span>
+                <h1>Download Fast Connect</h1>
+                <p>Free for Windows, macOS and Linux. The installer sets everything up for you, with no typing
+                    needed.</p>
+
+                <div class="download-buttons">
+                    <a href="https://github.com/bdy612/fast-connect/releases/latest/download/FastConnect-Setup-v1.1.exe" class="cta-button download-btn" data-for="windows">
+                        <i class="fab fa-windows"></i> Download for Windows
+                    </a>
+                    <a href="downloads/FastConnect-v1.1.zip" download class="cta-button download-btn" data-for="mac linux">
+                        <i class="fab fa-apple"></i> <i class="fab fa-linux"></i> Download for macOS / Linux
+                    </a>
+                </div>
+
+                <p class="download-meta" data-for="windows">FastConnect-Setup-v1.1.exe &middot; about 28 MB
+                    &middot; Windows 10 or 11 &middot; Nothing else to install</p>
+                <p class="download-meta" data-for="mac linux">FastConnect-v1.1.zip &middot; about 350 KB &middot;
+                    Python is installed for you if needed</p>
+                <p class="download-meta">Internet needed for FastAI and cloud accounts</p>
+            </div>
+        </section>
+
+        <section class="container" id="install">
+            <h2>Install in a few clicks</h2>
+            <p>No typing needed. Pick your system; we've tried to select it for you.</p>
+
+            <div class="os-tabs" role="tablist">
+                <button class="os-tab" role="tab" data-os="windows"><i class="fab fa-windows"></i> Windows</button>
+                <button class="os-tab" role="tab" data-os="mac"><i class="fab fa-apple"></i> macOS</button>
+                <button class="os-tab" role="tab" data-os="linux"><i class="fab fa-linux"></i> Linux</button>
+            </div>
+
+            <div class="os-panel" data-os="windows" role="tabpanel">
+                <ol class="steps">
+                    <li>
+                        <h3>Double-click <strong>FastConnect-Setup-v1.1.exe</strong></h3>
+                        <p>You'll find it in your Downloads folder. Python and everything else the app needs is
+                            built in.</p>
+                        <p class="step-note"><i class="fas fa-shield-halved"></i> If Windows shows "Windows
+                            protected your PC", click <strong>More info &rarr; Run anyway</strong>. This appears
+                            because the installer is new and not yet code-signed.</p>
+                    </li>
+                    <li>
+                        <h3>Click <strong>Install</strong></h3>
+                        <p>Fast Connect installs for your account only, so no admin password is needed. Choose
+                            whether you want a Desktop shortcut.</p>
+                    </li>
+                    <li>
+                        <h3>That's it</h3>
+                        <p>Fast Connect starts automatically. Find it later in the <strong>Start Menu</strong> or on
+                            your Desktop. To remove it, go to <strong>Settings &rarr; Apps</strong>.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="os-panel" data-os="mac" role="tabpanel" hidden>
+                <ol class="steps">
+                    <li>
+                        <h3>Unzip the download</h3>
+                        <p>Double-click <strong>FastConnect-v1.1.zip</strong> in your Downloads folder, then drag the
+                            <strong>FastConnect</strong> folder somewhere permanent, such as Documents.</p>
+                    </li>
+                    <li>
+                        <h3>Double-click <strong>Install Fast Connect</strong></h3>
+                        <p>A Terminal window opens and shows the progress. macOS doesn't come with Python, so the
+                            first time, the installer downloads the official version from python.org and opens
+                            Apple's installer. Click <strong>Continue</strong> and <strong>Install</strong> there, and
+                            the rest carries on by itself.</p>
+                        <p class="step-note"><i class="fas fa-shield-halved"></i> If macOS says it can't verify
+                            the developer, click <strong>Done</strong>. Then open <strong>System Settings &rarr;
+                            Privacy &amp; Security</strong>, scroll down and click <strong>Open Anyway</strong>. On
+                            older macOS versions, right-click the file and choose <strong>Open</strong>.</p>
+                    </li>
+                    <li>
+                        <h3>That's it</h3>
+                        <p><strong>Fast Connect</strong> is added to your Applications folder and Desktop, with
+                            its own icon, and it starts automatically.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="os-panel" data-os="linux" role="tabpanel" hidden>
+                <ol class="steps">
+                    <li>
+                        <h3>Unzip the download</h3>
+                        <p>Right-click <strong>FastConnect-v1.1.zip</strong> in your file manager, choose
+                            <strong>Extract Here</strong>, and move the <strong>FastConnect</strong> folder somewhere
+                            permanent, such as your Home folder.</p>
+                    </li>
+                    <li>
+                        <h3>Run <strong>install.sh</strong></h3>
+                        <p>Right-click <strong>install.sh</strong> and choose <strong>Run as a Program</strong>.
+                            On KDE, Mint and most other desktops, you can double-click it and choose
+                            <strong>Run</strong> or <strong>Execute</strong>.</p>
+                        <p class="step-note"><i class="fas fa-circle-info"></i> A terminal window shows the
+                            progress. Linux already includes Python, but some systems leave out Tkinter, the
+                            toolkit Fast Connect uses for its windows. If it's missing, the installer offers to
+                            add it and asks for your password.</p>
+                    </li>
+                    <li>
+                        <h3>That's it</h3>
+                        <p><strong>Fast Connect</strong> appears in your applications menu and on your Desktop,
+                            with its own icon, and it starts automatically.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="info-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-box-open"></i> What's included</h3>
+                    <ul class="check-list">
+                        <li><strong>Windows:</strong> a setup program with Python built in, so there's nothing
+                            else to install</li>
+                        <li><strong>macOS &amp; Linux:</strong> a ZIP with a one-click installer that adds Python
+                            if your system needs it</li>
+                        <li>A private copy of everything the app needs, so nothing else on your computer
+                            changes</li>
+                        <li>Start Menu, Applications or app-menu entries and a Desktop shortcut, all with the
+                            Fast Connect icon</li>
+                        <li>README and MIT License</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-screwdriver-wrench"></i> Troubleshooting</h3>
+                    <ul class="check-list">
+                        <li><strong>"Fast Connect is running" (Windows)</strong>: close Fast Connect, then click
+                            <strong>Try again</strong> in the installer.</li>
+                        <li><strong>install.sh opens in a text editor (Linux)</strong>: right-click it and choose
+                            <strong>Run as a Program</strong>. If that option is missing, open
+                            <strong>Properties &rarr; Permissions</strong>, tick <strong>Allow executing file as
+                            program</strong>, and try again.</li>
+                        <li><strong>Network errors</strong>: check your internet connection and run the installer
+                            again. It's safe to run more than once.</li>
+                        <li><strong>The shortcut stopped working (macOS / Linux)</strong>: you probably moved
+                            the FastConnect folder. Run the installer again from its new location.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>What's new</h2>
+            <div class="feature-card" style="margin-top: 2rem;">
+                <h3>v1.1 &middot; October 2026 (current)</h3>
+                <ul class="check-list">
+                    <li>FastAI Desktop Assistant (beta): Gemini chat, image understanding and generation, video
+                        analysis, and audio</li>
+                    <li>Cloud accounts with secure login, and your profile and friends synced to Google Drive</li>
+                    <li>Friend requests, plus private DMs that open with a double-click</li>
+                    <li>More stable networking with length-prefixed message framing</li>
+                    <li>Stronger security: AES-256 encrypted connections, verified identities on chat servers,
+                        and salted password hashes</li>
+                    <li>A new Windows setup program with Python built in, plus one-click installers for macOS and
+                        Linux</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fast Connect. Released under the MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="nav.js"></script>
+    <script src="install.js"></script>
+</body>
+
+</html>

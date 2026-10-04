@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="no-referrer">
+    <title>My Account - Fast Connect</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        .account-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 20px 40px;
+        }
+
+        .account-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .account-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .account-card h2 {
+            color: #3b82f6;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-item {
+            background: rgba(15, 23, 42, 0.5);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .info-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+
+
+
+        .account-button {
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .account-button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .logout-button {
+            background: #ef4444;
+        }
+
+        .logout-button:hover {
+            background: #dc2626;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="favicon.png" alt="">Fast Connect</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="download.html">Download</a>
+                    <a href="account.html" class="active">Account</a>
+                </div>
+                <a href="login.html" class="cta-button" id="logoutNav">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="account-container">
+            <div class="account-header">
+                <h1><i class="fas fa-user-circle"></i> My Account</h1>
+                <p>Your Fast Connect account. Use it to log in to the app too.</p>
+            </div>
+
+            <!-- Account Info -->
+            <div class="account-card">
+                <h2><i class="fas fa-info-circle"></i> Account Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Username</div>
+                        <div class="info-value" id="displayUsername">-</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Real Name</div>
+                        <div class="info-value" id="displayRealName">-</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">User Number</div>
+                        <div class="info-value" id="displayUserNumber">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="account-card">
+                <h2><i class="fas fa-cog"></i> Account Actions</h2>
+                <button class="account-button" id="downloadButton">
+                    <i class="fas fa-download"></i> Download Fast Connect
+                </button>
+                <button class="account-button logout-button" id="logoutButton">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fast Connect. Released under the MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="account.js"></script>
+</body>
+
+</html>

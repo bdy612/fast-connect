@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="no-referrer">
+    <title>Fast Connect - Encrypted Chat with an AI Assistant</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="description" content="Fast Connect is a free desktop app for encrypted group and private chat, with the built-in FastAI assistant.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><img src="favicon.png" alt="">Fast Connect</a>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="download.html">Download</a>
+                </div>
+                <a href="login.html" class="cta-button" id="navAuthButton">Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="badge">v1.1 - October 2026</span>
+                        <span class="badge">New: FastAI Assistant</span>
+                    </div>
+                    <h1>Chat privately. Get answers fast.</h1>
+                    <p>Fast Connect is a desktop app for encrypted group and one-on-one chat. Host your own server
+                        or join a friend's, and ask the built-in FastAI assistant anything, in the same window.</p>
+                    <div class="hero-buttons">
+                        <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Download Free</a>
+                        <a href="features.html" class="secondary-button">See Features</a>
+                    </div>
+                    <p class="hero-note"><i class="fab fa-windows"></i> <i class="fab fa-apple"></i>
+                        <i class="fab fa-linux"></i> Windows, macOS &amp; Linux &middot; Free &middot; One-click install</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Why Fast Connect?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                        <h3>Layered Encryption</h3>
+                        <p>Every connection is encrypted with AES-256, and each broadcast and direct message also
+                            passes through several layers of the Vigenère cipher.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                        <h3>FastAI Assistant</h3>
+                        <p>Chat with Google Gemini, have it describe images and videos, generate pictures, and
+                            turn text into audio.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-user-group"></i></div>
+                        <h3>Cloud Accounts &amp; Friends</h3>
+                        <p>Sign up once, here or in the app. Your password is stored only as a salted hash, and
+                            your profile and friends list follow you to any computer.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-server"></i></div>
+                        <h3>Host Your Own Server</h3>
+                        <p>Start a chat server in one click, or connect to an existing one. The networking is
+                            multi-threaded and keeps connections stable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container cta-strip">
+                <h2>Ready in about two minutes</h2>
+                <p>Download it, double-click the installer, and click Install. It sets everything up and adds a
+                    shortcut. No typing needed.</p>
+                <a href="download.html" class="cta-button"><i class="fas fa-download"></i> Get Fast Connect 1.1</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fast Connect. Released under the MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+    <script src="nav.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

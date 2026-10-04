@@ -1,0 +1,13 @@
+# Never commit secrets or local data
+secrets.local.json
+gdrive_credentials.json
+gemini_credentials.json
+fc_data.json
+users_db.json
+server_config.json
+*.log
+
+# Build output
+__pycache__/
+.venv/
+build/
