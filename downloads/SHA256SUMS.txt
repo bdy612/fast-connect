@@ -1,0 +1,2 @@
+390de01626e66422d005947b1cb9fdd4a1937673f3374d7f67ae8b50f88dfc93  FastConnect-Setup-v1.1.exe
+cbbf22b3c8e50c1931c07f6f2918b6b3b7c76a02631dfed1d664a27dde63f7dd  FastConnect-v1.1.zip
